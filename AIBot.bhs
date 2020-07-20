@@ -550,7 +550,7 @@ int scenario BuildUniversity(int who)
 
 		if (university_id != 0 && university_id != -1)
 		{
-			if(resource_cap_warning(who, "Knowledge") != 1 && population_cap(who) < 150)
+			if(resource_cap_warning(who, "Knowledge") != 1 && population(who) < 150)
 				didSmth += train_unit_at_with_cost(who,7,"Scholar",university_id);
 			
 			if (cityFoundName == find_capital(who))
@@ -620,7 +620,7 @@ int scenario CanBuildDock(int who)
 			}
 			else if(num_type_queued(who, find_city_id(cityFoundName),"Citizen") <= 0)
 			{
-				if(population_cap(who) < 150) didSmth += train_unit_at_with_cost(who,1,"Citizen",find_city_id(cityFoundName));
+				if(population(who) < 150) didSmth += train_unit_at_with_cost(who,1,"Citizen",find_city_id(cityFoundName));
 			}
 		}
 	}
@@ -813,7 +813,7 @@ int scenario NewCheckBuildWork(int who)
 			}
 			else if (num_type_queued(who, find_city_id(find_capital(who)), "Citizen") <= 0 && num_in_group(char_from_int(build_farm)) != max_work)
 			{
-				if(population_cap(who) < 165) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
+				if(population(who) < 165) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
 			}
 		}
 	}
@@ -844,7 +844,7 @@ int scenario NewCheckBuildWork(int who)
 			}
 			else if (num_type_queued(who, find_city_id(find_capital(who)), "Citizen") <= 0 && num_in_group(char_from_int(build_wood)) != max_work)
 			{
-				if(population_cap(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
+				if(population(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
 			}
 		}
 	}
@@ -875,7 +875,7 @@ int scenario NewCheckBuildWork(int who)
 			}
 			else if (num_type_queued(who, find_city_id(find_capital(who)), "Citizen") <= 0 && num_in_group(char_from_int(build_mine)) != max_work)
 			{
-				if(population_cap(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
+				if(population(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
 			}
 		}
 	}
@@ -906,7 +906,7 @@ int scenario NewCheckBuildWork(int who)
 			}
 			else if (num_type_queued(who, find_city_id(find_capital(who)), "Citizen") <= 0 && num_in_group(char_from_int(build_oil)) != max_work)
 			{
-				if(population_cap(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
+				if(population(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
 			}
 		}
 	}
@@ -937,7 +937,7 @@ int scenario NewCheckBuildWork(int who)
 			}
 			else if (num_type_queued(who, find_city_id(find_capital(who)), "Citizen") <= 0 && num_in_group(char_from_int(build_oil_plat)) != max_work)
 			{
-				if(population_cap(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
+				if(population(who) < 150) didSmth += train_unit_at_with_cost(who, 1, "Citizen", find_city_id(find_capital(who)));
 			}
 		}
 	}
